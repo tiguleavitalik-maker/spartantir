@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:shooting-club-128.webflow.io)",
+      "Bash(curl -sL https://spartantir.md/ -o __TRACKED_VAR__/spartan.html)",
+      "Bash(curl -sL https://spartantir.md/)",
+      "Bash(grep -oiE '#[0-9a-f]{3,8}|rgba?\\\\\\([^\\)]+\\\\\\)')"
+    ]
+  }
+}
