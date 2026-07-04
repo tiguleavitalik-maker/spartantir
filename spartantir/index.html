@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPARTAN TIR — крытый стрелковый тир в Кишинёве</title>
+  <meta name="description" content="Практическая стрельба в Кишинёве. 25-метровая галерея, стрельба в статике и в движении, настоящее оружие и профессиональные инструкторы.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="#hero" class="header__logo" aria-label="SPARTAN TIR">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="20" cy="20" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="20" cy="20" r="2.5" fill="var(--red)"/>
+          <line x1="20" y1="0" x2="20" y2="8" stroke="currentColor" stroke-width="2"/>
+          <line x1="20" y1="32" x2="20" y2="40" stroke="currentColor" stroke-width="2"/>
+          <line x1="0" y1="20" x2="8" y2="20" stroke="currentColor" stroke-width="2"/>
+          <line x1="32" y1="20" x2="40" y2="20" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span class="header__logo-text">SPARTAN<em>TIR</em></span>
+      </a>
+
+      <nav class="header__nav" id="nav" aria-label="Главное меню">
+        <a class="nav-link" href="#about" data-i18n="nav.about">О тире</a>
+        <a class="nav-link" href="#arsenal" data-i18n="nav.arsenal">Арсенал</a>
+        <a class="nav-link" href="#packages" data-i18n="nav.packages">Пакеты</a>
+        <a class="nav-link" href="#services" data-i18n="nav.services">Услуги</a>
+        <a class="nav-link" href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a class="nav-link" href="#contacts" data-i18n="nav.contacts">Контакты</a>
+        <div class="header__mobile-extra">
+          <a class="btn btn--primary" href="#booking" data-i18n="nav.cta">Записаться</a>
+        </div>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang-switch" role="group" aria-label="Язык">
+          <button class="lang-switch__btn" data-lang="ro" type="button">RO</button>
+          <button class="lang-switch__btn is-active" data-lang="ru" type="button">RU</button>
+          <button class="lang-switch__btn" data-lang="en" type="button">EN</button>
+        </div>
+        <a class="btn btn--primary btn--magnetic header__cta" href="#booking" data-i18n="nav.cta">Записаться</a>
+        <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <svg class="hero__crosshair" viewBox="0 0 600 600" data-parallax="0.15">
+          <circle cx="300" cy="300" r="290" fill="none" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+          <circle cx="300" cy="300" r="220" fill="none" stroke="currentColor" stroke-width="1" opacity="0.35"/>
+          <circle cx="300" cy="300" r="150" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+          <circle cx="300" cy="300" r="80" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+          <circle cx="300" cy="300" r="6" fill="var(--red)"/>
+          <line x1="300" y1="0" x2="300" y2="120" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <line x1="300" y1="480" x2="300" y2="600" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <line x1="0" y1="300" x2="120" y2="300" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <line x1="480" y1="300" x2="600" y2="300" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+        </svg>
+        <div class="hero__glow"></div>
+      </div>
+
+      <div class="hero__content container">
+        <p class="hero__kicker" data-anim="hero-kicker">
+          <span class="hero__kicker-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.kicker">Крытый стрелковый тир · Кишинёв</span>
+        </p>
+        <h1 class="hero__title" data-anim="hero-title">
+          <span class="hero__title-line">SPARTAN</span>
+          <span class="hero__title-line hero__title-line--accent">TIR</span>
+        </h1>
+        <p class="hero__subtitle" data-anim="hero-sub" data-i18n="hero.subtitle">Практическая стрельба. В статике и в движении.</p>
+        <p class="hero__lead" data-anim="hero-lead" data-i18n="hero.lead">25-метровая галерея, где стреляют не только по мишени, но и в боевом перемещении. Настоящее оружие, профессиональные инструкторы и адреналин, который остаётся с тобой.</p>
+        <div class="hero__actions" data-anim="hero-actions">
+          <a class="btn btn--primary btn--lg btn--magnetic" href="#booking" data-i18n="hero.cta1">Записаться на стрельбу</a>
+          <a class="btn btn--ghost btn--lg" href="#packages" data-i18n="hero.cta2">Смотреть пакеты</a>
+        </div>
+        <ul class="hero__stats" data-anim="hero-stats">
+          <li class="hero__stat">
+            <span class="hero__stat-value"><span data-counter="25">0</span> <small data-i18n="hero.stat1unit">м</small></span>
+            <span class="hero__stat-label" data-i18n="hero.stat1">галерея</span>
+          </li>
+          <li class="hero__stat">
+            <span class="hero__stat-value">9×19</span>
+            <span class="hero__stat-label" data-i18n="hero.stat2">калибр</span>
+          </li>
+          <li class="hero__stat">
+            <span class="hero__stat-value">10–22</span>
+            <span class="hero__stat-label" data-i18n="hero.stat3">Вт–Вс</span>
+          </li>
+        </ul>
+      </div>
+
+      <a class="hero__scroll-hint" href="#about" aria-label="Прокрутить вниз">
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span data-i18n="marquee.1">Практическая стрельба</span><i>●</i>
+          <span data-i18n="marquee.2">25 метров</span><i>●</i>
+          <span data-i18n="marquee.3">Стрельба в движении</span><i>●</i>
+          <span>9×19</span><i>●</i>
+          <span data-i18n="marquee.4">Профессиональные инструкторы</span><i>●</i>
+          <span data-i18n="marquee.5">Адреналин</span><i>●</i>
+        </div>
+        <div class="marquee__group">
+          <span data-i18n="marquee.1">Практическая стрельба</span><i>●</i>
+          <span data-i18n="marquee.2">25 метров</span><i>●</i>
+          <span data-i18n="marquee.3">Стрельба в движении</span><i>●</i>
+          <span>9×19</span><i>●</i>
+          <span data-i18n="marquee.4">Профессиональные инструкторы</span><i>●</i>
+          <span data-i18n="marquee.5">Адреналин</span><i>●</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="section__label"><span>01</span><span data-i18n="about.label">О тире</span></p>
+          <h2 class="section__title" data-i18n="about.title">Не просто пострелять по мишени</h2>
+          <p class="section__desc" data-i18n="about.desc">SPARTAN TIR — тир практической стрельбы в Кишинёве. Здесь работают с настоящим оружием, учат двигаться и стрелять как в реальной ситуации — и делают это безопасно, комфортно и круглый год.</p>
+        </div>
+
+        <div class="about__grid" data-reveal-group>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M4 24h40M8 20v8M16 18v12M24 16v16M32 18v12M40 20v8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="feature__title" data-i18n="about.f1.title">Галерея 25 метров</h3>
+            <p class="feature__text" data-i18n="about.f1.text">Полноценная дистанция для практической стрельбы — от коротких скоростных упражнений до работы на дальнем рубеже.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M10 38l8-10 6 5 8-12 6 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            </div>
+            <h3 class="feature__title" data-i18n="about.f2.title">Стрельба в движении</h3>
+            <p class="feature__text" data-i18n="about.f2.text">Не только статика: боевое перемещение по галерее — то, чего нет в обычных тирах. Главная фишка SPARTAN TIR.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M24 12v12l8 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="feature__title" data-i18n="about.f3.title">Круглый год</h3>
+            <p class="feature__text" data-i18n="about.f3.text">Крытый тир с современной вентиляцией и освещением. Дождь, снег или жара — на рубеже всегда комфортно.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-6.5 18-16 22C14.5 40 8 32 8 22V10l16-6z" stroke="currentColor" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M17 24l5 5 9-11" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="feature__title" data-i18n="about.f4.title">Безопасность и контроль</h3>
+            <p class="feature__text" data-i18n="about.f4.text">Каждый выход на рубеж — под контролем профессионального инструктора. Инструктаж перед стрельбой обязателен.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ARSENAL ============ -->
+    <section class="section arsenal" id="arsenal">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="section__label"><span>02</span><span data-i18n="arsenal.label">Арсенал</span></p>
+          <h2 class="section__title" data-i18n="arsenal.title">Настоящее оружие, настоящие характеристики</h2>
+          <p class="section__desc" data-i18n="arsenal.desc">Никаких игрушек: боевые пистолеты, карабины и пневматика для лёгкого старта. Всё оружие обслуживается собственной мастерской тира.</p>
+        </div>
+
+        <div class="arsenal__grid" data-reveal-group>
+          <article class="gun-card">
+            <div class="gun-card__media" aria-hidden="true">
+              <svg class="ph" viewBox="0 0 400 260" role="img"><rect width="400" height="260" fill="none"/><g class="ph__rings"><circle cx="200" cy="130" r="90" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="200" cy="130" r="55" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="200" cy="130" r="22" fill="none" stroke="currentColor" stroke-width="1"/><line x1="200" y1="20" x2="200" y2="240" stroke="currentColor" stroke-width="1"/><line x1="90" y1="130" x2="310" y2="130" stroke="currentColor" stroke-width="1"/></g><text x="200" y="135" class="ph__text" text-anchor="middle">PHOTO</text></svg>
+              <span class="gun-card__num">01</span>
+            </div>
+            <div class="gun-card__body">
+              <h3 class="gun-card__title" data-i18n="arsenal.g1.title">Пистолеты 9×19</h3>
+              <p class="gun-card__text" data-i18n="arsenal.g1.text">Чешские пистолеты, австрийский Glock и другие. Классика практической стрельбы — то, с чего начинается каждый визит.</p>
+              <dl class="gun-card__specs">
+                <div><dt data-i18n="arsenal.spec.weight">Вес</dt><dd>700–1180 <span data-i18n="arsenal.unit.g">г</span></dd></div>
+                <div><dt data-i18n="arsenal.spec.mag">Магазин</dt><dd>15–19 <span data-i18n="arsenal.unit.rounds">патр.</span></dd></div>
+                <div><dt data-i18n="arsenal.spec.barrel">Ствол</dt><dd>95–120 <span data-i18n="arsenal.unit.mm">мм</span></dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="gun-card">
+            <div class="gun-card__media" aria-hidden="true">
+              <svg class="ph" viewBox="0 0 400 260" role="img"><rect width="400" height="260" fill="none"/><g class="ph__rings"><circle cx="200" cy="130" r="90" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="200" cy="130" r="55" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="200" cy="130" r="22" fill="none" stroke="currentColor" stroke-width="1"/><line x1="200" y1="20" x2="200" y2="240" stroke="currentColor" stroke-width="1"/><line x1="90" y1="130" x2="310" y2="130" stroke="currentColor" stroke-width="1"/></g><text x="200" y="135" class="ph__text" text-anchor="middle">PHOTO</text></svg>
+              <span class="gun-card__num">02</span>
+            </div>
+            <div class="gun-card__body">
+              <h3 class="gun-card__title" data-i18n="arsenal.g2.title">Карабины</h3>
+              <p class="gun-card__text" data-i18n="arsenal.g2.text">Длинноствол для тех, кто хочет большего: работа на всей дистанции галереи, в статике и в движении.</p>
+              <dl class="gun-card__specs">
+                <div><dt data-i18n="arsenal.spec.distance">Дистанция</dt><dd data-i18n="arsenal.g2.distance">до 25 м</dd></div>
+                <div><dt data-i18n="arsenal.spec.mode">Режим</dt><dd data-i18n="arsenal.g2.mode">статика / движение</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="gun-card">
+            <div class="gun-card__media" aria-hidden="true">
+              <svg class="ph" viewBox="0 0 400 260" role="img"><rect width="400" height="260" fill="none"/><g class="ph__rings"><circle cx="200" cy="130" r="90" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="200" cy="130" r="55" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="200" cy="130" r="22" fill="none" stroke="currentColor" stroke-width="1"/><line x1="200" y1="20" x2="200" y2="240" stroke="currentColor" stroke-width="1"/><line x1="90" y1="130" x2="310" y2="130" stroke="currentColor" stroke-width="1"/></g><text x="200" y="135" class="ph__text" text-anchor="middle">PHOTO</text></svg>
+              <span class="gun-card__num">03</span>
+            </div>
+            <div class="gun-card__body">
+              <h3 class="gun-card__title" data-i18n="arsenal.g3.title">Пневматика</h3>
+              <p class="gun-card__text" data-i18n="arsenal.g3.text">Лёгкий старт без отдачи и грохота — для первого знакомства и для юных стрелков в семейном формате.</p>
+              <dl class="gun-card__specs">
+                <div><dt data-i18n="arsenal.spec.age">Возраст</dt><dd>14+</dd></div>
+                <div><dt data-i18n="arsenal.spec.level">Уровень</dt><dd data-i18n="arsenal.g3.level">для новичков</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PACKAGES ============ -->
+    <section class="section packages" id="packages">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="section__label"><span>03</span><span data-i18n="packages.label">Пакеты</span></p>
+          <h2 class="section__title" data-i18n="packages.title">Выбери свой формат</h2>
+          <p class="section__desc" data-i18n="packages.desc">В каждом пакете — инструктаж, сопровождение инструктора и прострелянная мишень на память. Цены указаны в леях за человека.</p>
+        </div>
+
+        <div class="packages__grid" data-reveal-group>
+          <article class="pack">
+            <h3 class="pack__name" data-i18n="packages.p1.name">Базовый</h3>
+            <p class="pack__price">1010 <small data-i18n="packages.currency">лей</small></p>
+            <p class="pack__text" data-i18n="packages.p1.text">Первое знакомство с огнестрельным оружием под полным контролем инструктора.</p>
+            <button class="btn btn--outline pack__btn" type="button" data-package="basic" data-i18n="packages.choose">Выбрать</button>
+          </article>
+
+          <article class="pack">
+            <h3 class="pack__name" data-i18n="packages.p2.name">Уровень 1</h3>
+            <p class="pack__price">1350 <small data-i18n="packages.currency">лей</small></p>
+            <p class="pack__text" data-i18n="packages.p2.text">Больше выстрелов и больше стволов — для тех, кто хочет распробовать.</p>
+            <button class="btn btn--outline pack__btn" type="button" data-package="level1" data-i18n="packages.choose">Выбрать</button>
+          </article>
+
+          <article class="pack pack--featured">
+            <span class="pack__badge" data-i18n="packages.p3.badge">Максимум</span>
+            <h3 class="pack__name" data-i18n="packages.p3.name">Уровень 2</h3>
+            <p class="pack__price">2075 <small data-i18n="packages.currency">лей</small></p>
+            <p class="pack__text" data-i18n="packages.p3.text">Полная программа: максимум оружия, выстрелов и адреналина за один визит.</p>
+            <button class="btn btn--primary pack__btn" type="button" data-package="level2" data-i18n="packages.choose">Выбрать</button>
+          </article>
+
+          <article class="pack">
+            <h3 class="pack__name" data-i18n="packages.p4.name">Только девушки</h3>
+            <p class="pack__price">1365 <small data-i18n="packages.currency">лей</small></p>
+            <ul class="pack__list">
+              <li data-i18n="packages.p4.d1">60 минут</li>
+              <li data-i18n="packages.p4.d2">60 выстрелов</li>
+              <li data-i18n="packages.p4.d3">3 вида оружия</li>
+              <li data-i18n="packages.p4.d4">18+</li>
+            </ul>
+            <button class="btn btn--outline pack__btn" type="button" data-package="girls" data-i18n="packages.choose">Выбрать</button>
+          </article>
+
+          <article class="pack">
+            <h3 class="pack__name" data-i18n="packages.p5.name">Семейный</h3>
+            <p class="pack__price pack__price--sm" data-i18n="packages.onrequest">по запросу</p>
+            <ul class="pack__list">
+              <li data-i18n="packages.p5.d1">70 минут</li>
+              <li data-i18n="packages.p5.d2">110 выстрелов</li>
+              <li data-i18n="packages.p5.d3">2 взрослых + 1–2 ребёнка</li>
+              <li data-i18n="packages.p5.d4">14+</li>
+            </ul>
+            <button class="btn btn--outline pack__btn" type="button" data-package="family" data-i18n="packages.choose">Выбрать</button>
+          </article>
+
+          <article class="pack">
+            <h3 class="pack__name" data-i18n="packages.p6.name">Дуэт</h3>
+            <p class="pack__price pack__price--sm" data-i18n="packages.onrequest">по запросу</p>
+            <p class="pack__text" data-i18n="packages.p6.text">Формат для двоих — свидание, вызов другу или парная тренировка.</p>
+            <button class="btn btn--outline pack__btn" type="button" data-package="duo" data-i18n="packages.choose">Выбрать</button>
+          </article>
+        </div>
+
+        <p class="packages__note" data-reveal>
+          <span class="packages__note-mark" aria-hidden="true">!</span>
+          <span data-i18n="packages.note">Предварительная запись обязательна. Огнестрельное оружие — 18+, семейный формат — 14+.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE / TIMELINE ============ -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="section__label"><span>04</span><span data-i18n="exp.label">Как это проходит</span></p>
+          <h2 class="section__title" data-i18n="exp.title">90 минут, которые запомнятся</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"><span class="timeline__line-fill"></span></div>
+          <ol class="timeline__list">
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__num">01</span>
+              <div class="timeline__body">
+                <h3 class="timeline__title" data-i18n="exp.s1.title">Инструктаж</h3>
+                <p class="timeline__text" data-i18n="exp.s1.text">Профессиональный инструктор объясняет правила безопасности, стойку и хват. Опыт не нужен — научим с нуля.</p>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__num">02</span>
+              <div class="timeline__body">
+                <h3 class="timeline__title" data-i18n="exp.s2.title">Выбор оружия</h3>
+                <p class="timeline__text" data-i18n="exp.s2.text">Подбираете стволы под свой пакет — от пистолета 9×19 до карабина. Инструктор поможет с выбором.</p>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__num">03</span>
+              <div class="timeline__body">
+                <h3 class="timeline__title" data-i18n="exp.s3.title">Огонь на рубеже</h3>
+                <p class="timeline__text" data-i18n="exp.s3.text">Стреляете в статике и в движении по 25-метровой галерее — под постоянным контролем инструктора.</p>
+              </div>
+            </li>
+            <li class="timeline__item" data-reveal>
+              <span class="timeline__num">04</span>
+              <div class="timeline__body">
+                <h3 class="timeline__title" data-i18n="exp.s4.title">Мишень на память</h3>
+                <p class="timeline__text" data-i18n="exp.s4.text">Забираете прострелянную мишень и фотографии на смартфон — трофей, который захочется показать.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="section__label"><span>05</span><span data-i18n="services.label">Услуги</span></p>
+          <h2 class="section__title" data-i18n="services.title">Больше, чем тир</h2>
+        </div>
+
+        <div class="services__grid" data-reveal-group>
+          <article class="service">
+            <h3 class="service__title" data-i18n="services.s1.title">Тренировки с инструктором</h3>
+            <p class="service__text" data-i18n="services.s1.text">Индивидуальные и групповые занятия — от первого выстрела до уверенной практической стрельбы.</p>
+          </article>
+          <article class="service">
+            <h3 class="service__title" data-i18n="services.s2.title">Аренда оружия и снаряжения</h3>
+            <p class="service__text" data-i18n="services.s2.text">Всё необходимое на месте: оружие, защита слуха и зрения, патроны.</p>
+          </article>
+          <article class="service">
+            <h3 class="service__title" data-i18n="services.s3.title">Ремонт и обслуживание</h3>
+            <p class="service__text" data-i18n="services.s3.text">Собственная мастерская: чистка, диагностика и ремонт вашего оружия.</p>
+          </article>
+          <article class="service">
+            <h3 class="service__title" data-i18n="services.s4.title">Оружейный магазин</h3>
+            <p class="service__text" data-i18n="services.s4.text">Специализированный магазин оружия и аксессуаров прямо в тире.</p>
+          </article>
+          <article class="service">
+            <h3 class="service__title" data-i18n="services.s5.title">Депозит хранения</h3>
+            <p class="service__text" data-i18n="services.s5.text">Безопасное хранение вашего оружия в оборудованном депозите.</p>
+          </article>
+          <article class="service">
+            <h3 class="service__title" data-i18n="services.s6.title">Центр подготовки</h3>
+            <p class="service__text" data-i18n="services.s6.text">Обучение владельцев гражданского оружия и частных охранников.</p>
+          </article>
+          <article class="service service--wide">
+            <h3 class="service__title" data-i18n="services.s7.title">Тимбилдинг и праздники</h3>
+            <p class="service__text" data-i18n="services.s7.text">Корпоративы, дни рождения и командные форматы — впечатление, которое не забудет ни один коллега.</p>
+            <a class="service__link" href="#booking" data-i18n="services.s7.link">Обсудить формат →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="section__label"><span>06</span><span data-i18n="gallery.label">Галерея</span></p>
+          <h2 class="section__title" data-i18n="gallery.title">Атмосфера рубежа</h2>
+        </div>
+      </div>
+      <div class="gallery__grid container-wide" data-reveal-group>
+        <!-- Плейсхолдеры: заменить на <img src="..."> при получении фото -->
+        <figure class="gallery__item"><svg class="ph ph--photo" viewBox="0 0 600 400"><g class="ph__rings"><circle cx="300" cy="200" r="140" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="85" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="30" fill="none" stroke="currentColor"/><line x1="300" y1="30" x2="300" y2="370" stroke="currentColor"/><line x1="130" y1="200" x2="470" y2="200" stroke="currentColor"/></g><text x="300" y="207" class="ph__text" text-anchor="middle">PHOTO 01</text></svg></figure>
+        <figure class="gallery__item"><svg class="ph ph--photo" viewBox="0 0 600 400"><g class="ph__rings"><circle cx="300" cy="200" r="140" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="85" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="30" fill="none" stroke="currentColor"/><line x1="300" y1="30" x2="300" y2="370" stroke="currentColor"/><line x1="130" y1="200" x2="470" y2="200" stroke="currentColor"/></g><text x="300" y="207" class="ph__text" text-anchor="middle">PHOTO 02</text></svg></figure>
+        <figure class="gallery__item"><svg class="ph ph--photo" viewBox="0 0 600 400"><g class="ph__rings"><circle cx="300" cy="200" r="140" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="85" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="30" fill="none" stroke="currentColor"/><line x1="300" y1="30" x2="300" y2="370" stroke="currentColor"/><line x1="130" y1="200" x2="470" y2="200" stroke="currentColor"/></g><text x="300" y="207" class="ph__text" text-anchor="middle">PHOTO 03</text></svg></figure>
+        <figure class="gallery__item"><svg class="ph ph--photo" viewBox="0 0 600 400"><g class="ph__rings"><circle cx="300" cy="200" r="140" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="85" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="30" fill="none" stroke="currentColor"/><line x1="300" y1="30" x2="300" y2="370" stroke="currentColor"/><line x1="130" y1="200" x2="470" y2="200" stroke="currentColor"/></g><text x="300" y="207" class="ph__text" text-anchor="middle">PHOTO 04</text></svg></figure>
+        <figure class="gallery__item"><svg class="ph ph--photo" viewBox="0 0 600 400"><g class="ph__rings"><circle cx="300" cy="200" r="140" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="85" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="30" fill="none" stroke="currentColor"/><line x1="300" y1="30" x2="300" y2="370" stroke="currentColor"/><line x1="130" y1="200" x2="470" y2="200" stroke="currentColor"/></g><text x="300" y="207" class="ph__text" text-anchor="middle">PHOTO 05</text></svg></figure>
+        <figure class="gallery__item"><svg class="ph ph--photo" viewBox="0 0 600 400"><g class="ph__rings"><circle cx="300" cy="200" r="140" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="85" fill="none" stroke="currentColor"/><circle cx="300" cy="200" r="30" fill="none" stroke="currentColor"/><line x1="300" y1="30" x2="300" y2="370" stroke="currentColor"/><line x1="130" y1="200" x2="470" y2="200" stroke="currentColor"/></g><text x="300" y="207" class="ph__text" text-anchor="middle">PHOTO 06</text></svg></figure>
+      </div>
+      <p class="gallery__social container" data-reveal>
+        <span data-i18n="gallery.social">Больше — в наших соцсетях:</span>
+        <a href="https://www.instagram.com/spartantir" target="_blank" rel="noopener">Instagram @spartantir</a>
+      </p>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head" data-reveal>
+          <p class="section__label"><span>07</span><span>FAQ</span></p>
+          <h2 class="section__title" data-i18n="faq.title">Частые вопросы</h2>
+        </div>
+
+        <div class="faq__list" data-reveal-group>
+          <details class="faq__item">
+            <summary class="faq__q"><span data-i18n="faq.q1">Нужен ли опыт стрельбы?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__a" data-i18n="faq.a1">Нет. Перед стрельбой каждый проходит инструктаж, а на рубеже с вами постоянно работает инструктор. Большинство гостей стреляют впервые.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q"><span data-i18n="faq.q2">Со скольких лет можно стрелять?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__a" data-i18n="faq.a2">Огнестрельное оружие — с 18 лет. В семейном формате дети от 14 лет стреляют из пневматики в сопровождении взрослых.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q"><span data-i18n="faq.q3">Нужно ли записываться заранее?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__a" data-i18n="faq.a3">Да, предварительная запись обязательна. Тир работает Вт–Вс с 10:00 до 22:00, запись в галерею — до 21:00.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q"><span data-i18n="faq.q4">Сколько длится визит?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__a" data-i18n="faq.a4">В среднем 60–90 минут в зависимости от пакета: инструктаж, стрельба и фото на память.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q"><span data-i18n="faq.q5">Останется ли что-то на память?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__a" data-i18n="faq.a5">Да — прострелянная мишень и фотографии на ваш смартфон. Это часть опыта SPARTAN TIR.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q"><span data-i18n="faq.q6">Можно ли прийти компанией или на корпоратив?</span><span class="faq__icon" aria-hidden="true"></span></summary>
+            <p class="faq__a" data-i18n="faq.a6">Конечно. Тимбилдинги, корпоративы и дни рождения — отдельное направление тира. Напишите в форме записи, что вас интересует групповой формат.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section booking" id="booking">
+      <div class="booking__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="booking__grid">
+          <div class="booking__info" data-reveal>
+            <p class="section__label"><span>08</span><span data-i18n="booking.label">Запись</span></p>
+            <h2 class="section__title" data-i18n="booking.title">Готовы выйти на рубеж?</h2>
+            <p class="section__desc" data-i18n="booking.desc">Оставьте заявку — мы перезвоним, подтвердим время и ответим на вопросы. Предварительная запись обязательна.</p>
+            <ul class="booking__points">
+              <li data-i18n="booking.point1">Работаем Вт–Вс, 10:00–22:00</li>
+              <li data-i18n="booking.point2">Запись в галерею — до 21:00</li>
+              <li data-i18n="booking.point3">Подтверждение — звонком или в мессенджере</li>
+            </ul>
+            <a class="booking__phone" href="tel:+37369088678">+373 69 088 678</a>
+          </div>
+
+          <!-- Форма — точка подключения автоматизации заявок.
+               Данные собираются в main.js (handleBookingSubmit) и пока логируются;
+               заменить отправкой на endpoint, когда он появится. -->
+          <form class="booking__form" id="booking-form" data-reveal novalidate>
+            <div class="field">
+              <label class="field__label" for="bf-name" data-i18n="booking.name">Имя</label>
+              <input class="field__input" id="bf-name" name="name" type="text" autocomplete="name" required data-i18n-ph="booking.namePh" placeholder="Как к вам обращаться">
+              <span class="field__error" data-i18n="booking.nameErr">Укажите имя</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="bf-phone" data-i18n="booking.phone">Телефон</label>
+              <input class="field__input" id="bf-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+373 __ ___ ___">
+              <span class="field__error" data-i18n="booking.phoneErr">Укажите корректный номер телефона</span>
+            </div>
+            <div class="field">
+              <label class="field__label" for="bf-package" data-i18n="booking.package">Пакет</label>
+              <select class="field__input field__input--select" id="bf-package" name="package">
+                <option value="" data-i18n="booking.packagePh">Ещё не выбрал(а)</option>
+                <option value="basic" data-i18n="packages.p1.name">Базовый</option>
+                <option value="level1" data-i18n="packages.p2.name">Уровень 1</option>
+                <option value="level2" data-i18n="packages.p3.name">Уровень 2</option>
+                <option value="girls" data-i18n="packages.p4.name">Только девушки</option>
+                <option value="family" data-i18n="packages.p5.name">Семейный</option>
+                <option value="duo" data-i18n="packages.p6.name">Дуэт</option>
+                <option value="team" data-i18n="booking.packageTeam">Тимбилдинг / корпоратив</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="bf-date" data-i18n="booking.date">Желаемая дата</label>
+              <input class="field__input" id="bf-date" name="date" type="date">
+            </div>
+            <div class="field field--full">
+              <label class="field__label" for="bf-comment" data-i18n="booking.comment">Комментарий</label>
+              <textarea class="field__input field__input--area" id="bf-comment" name="comment" rows="3" data-i18n-ph="booking.commentPh" placeholder="Сколько вас, есть ли опыт, особые пожелания…"></textarea>
+            </div>
+            <button class="btn btn--primary btn--lg btn--magnetic booking__submit" type="submit" data-i18n="booking.submit">Отправить заявку</button>
+            <p class="booking__form-note" data-i18n="booking.formNote">Отправляя заявку, вы соглашаетесь на обработку контактных данных для записи.</p>
+
+            <div class="booking__success" hidden>
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15 24l6 6 12-13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h3 data-i18n="booking.successTitle">Заявка отправлена!</h3>
+              <p data-i18n="booking.successText">Мы свяжемся с вами, чтобы подтвердить время. До встречи на рубеже!</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTS / MAP ============ -->
+    <section class="contacts" id="contacts">
+      <div class="contacts__map">
+        <iframe
+          title="SPARTAN TIR на карте"
+          src="https://www.google.com/maps?q=bd.+Cuza-Vod%C4%83+16%2F5,+Chi%C8%99in%C4%83u,+Moldova&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+        <a class="contacts__map-link" href="https://maps.google.com/?q=bd.+Cuza-Vod%C4%83+16%2F5,+Chi%C8%99in%C4%83u,+Moldova" target="_blank" rel="noopener" data-i18n="contacts.mapLink">Открыть в Google Maps</a>
+      </div>
+      <div class="contacts__panel" data-reveal>
+        <h2 class="contacts__title" data-i18n="contacts.title">Контакты</h2>
+        <ul class="contacts__list">
+          <li>
+            <span class="contacts__key" data-i18n="contacts.address">Адрес</span>
+            <span class="contacts__val" data-i18n="contacts.addressVal">Кишинёв, бул. Куза-Водэ 16/5</span>
+          </li>
+          <li>
+            <span class="contacts__key" data-i18n="contacts.phone">Телефон</span>
+            <a class="contacts__val" href="tel:+37369088678">+373 69 088 678</a>
+          </li>
+          <li>
+            <span class="contacts__key" data-i18n="contacts.hours">График</span>
+            <span class="contacts__val" data-i18n="contacts.hoursVal">Вт–Вс: 10:00–22:00 · запись до 21:00</span>
+          </li>
+        </ul>
+        <div class="contacts__socials">
+          <a href="https://www.instagram.com/spartantir" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/spartantir" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tiktok.com/@spartantir" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__brand">SPARTAN<em>TIR</em></span>
+      <p class="footer__note" data-i18n="footer.note">Предварительная запись обязательна · Огнестрельное оружие 18+</p>
+      <p class="footer__copy">© <span id="year">2026</span> SPARTAN TIR</p>
+    </div>
+  </footer>
+
+  <!-- Библиотеки анимаций -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
